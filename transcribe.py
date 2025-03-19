@@ -10,7 +10,7 @@ transcribe = boto3.client('transcribe', region_name='us-west-2')
 
 # Nombre del trabajo de transcripción
 job_name = "demo-transcription"
-audio_uri = "s3://qubika-conference/transcribe/exercise.mp3"
+audio_uri = "s3://qubika-conference/transcribe/{audio}.mp3"
 
 # Iniciar transcripción
 transcribe.delete_transcription_job( TranscriptionJobName=job_name )
